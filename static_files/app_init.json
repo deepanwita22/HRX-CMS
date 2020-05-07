@@ -1,0 +1,102 @@
+[{
+    "type": "carousel",
+    "data": {
+      "header": "What's New?",
+      "aspect_ratio": "2.66666667:1",
+      "data": [{
+        "id": "1.1",
+        "is_new": true,
+        "banner_url": "https://ms-blob-link/card.svg",
+        "label": null,
+        "on_click_cta": {
+          "type": "webview|inapp",
+          "value": ""
+        }
+      },
+        {
+          "id": "1.2",
+          "is_new": true,
+          "banner_url": "https://ms-blob-link/card.svg",
+          "label": null,
+          "on_click_cta": {
+            "type": "webview|inapp",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+    {
+      "type": "grid",
+      "data": {
+        "header": null,
+        "aspect_ratio": "1.09090909:1",
+        "data": [{
+          "id": "2.1",
+          "is_new": false,
+          "banner_url": "https://ms-blob-link/card.svg",
+          "label": "Find Doctors",
+          "on_click_cta": {
+            "type": "webview|inapp",
+            "value": ""
+          }
+        },
+          {
+            "id": "2.2",
+            "is_new": false,
+            "banner_url": "https://ms-blob-link/card.svg",
+            "label": "Find Medicines",
+            "on_click_cta": {
+              "type": "webview|inapp",
+              "value": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "banner",
+      "data": {
+        "header": null,
+        "aspect_ratio": "5.82142857:1",
+        "data": [{
+          "id": "3",
+          "is_new": false,
+          "banner_url": "https://ms-blob-link/card.svg",
+          "label": null,
+          "on_click_cta": {
+            "type": "webview|inapp",
+            "value": ""
+          }
+        }]
+      }
+    },
+    {
+      "type": "carousel",
+      "data": {
+        "header": "Family Healthcare Solutions",
+        "aspect_ratio": "2.52777778:1",
+        "data": [{
+          "id": "4.1",
+          "is_new": false,
+          "banner_url": "https://ms-blob-link/card.svg",
+          "label": null,
+          "on_click_cta": {
+            "type": "",
+            "value": ""
+          }
+        },
+          {
+            "id": "4.2",
+            "is_new": false,
+            "banner_url": "https://ms-blob-link/card.svg",
+            "label": null,
+            "on_click_cta": {
+              "type": "",
+              "value": ""
+            }
+          }
+        ]
+      }
+    }
+  ]
