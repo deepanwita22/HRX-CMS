@@ -34,16 +34,6 @@
             "type": "webview|inapp",
             "value": ""
           }
-        },
-        {
-          "id": "1.4",
-          "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/top_banner_4.png",
-          "label": null,
-          "on_click_cta": {
-            "type": "webview|inapp",
-            "value": ""
-          }
         }
       ]
     }
@@ -67,7 +57,7 @@
         {
           "id": "2.2",
           "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/find_medicines.png",
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/find_medicine.png",
           "label": "Find Medicines",
           "on_click_cta": {
             "type": "webview|inapp",
@@ -77,7 +67,7 @@
         {
           "id": "2.3",
           "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/coronavirus_kit.png",
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/coronavirus.png",
           "label": "Coronavirus Kit",
           "on_click_cta": {
             "type": "webview|inapp",
@@ -87,7 +77,7 @@
         {
           "id": "2.4",
           "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/medication_reminder.png",
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/medicine_reminder.png",
           "label": "Medication Reminder",
           "on_click_cta": {
             "type": "webview|inapp",
@@ -97,7 +87,7 @@
         {
           "id": "2.5",
           "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/lifestyle_tracker.png",
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/lifetsyle_tracker.png",
           "label": "Lifestyle Tracker",
           "on_click_cta": {
             "type": "webview|inapp",
@@ -107,7 +97,7 @@
         {
           "id": "2.6",
           "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/Vaccination_Scheduler.png",
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/vaccination_scheduler.png",
           "label": "Vaccination Scheduler",
           "on_click_cta": {
             "type": "webview|inapp",
