@@ -183,12 +183,12 @@
           "label": null,
           "on_click_cta": {
             "profile_seletor": false,
-            "type": "webview|inapp",
-            "value": "",
+            "type": "inapp",
+            "value": "HealthAssistant",
             "clevertap": {
-              "event_name": "Highlightbanner_click",
+              "event_name": "Healthassistant_click",
               "property": {
-                "Card_name": "Book e-Consultation"
+                "Card_name": "Health Assistant"
               }
             }
           }
@@ -260,8 +260,8 @@
           "label": null,
           "on_click_cta": {
             "profile_seletor": false,
-            "type": "",
-            "value": "",
+            "type": "browser",
+            "value": "https://www.abhayatechglobal.com/RubyTelemedicine",
             "clevertap": {
               "event_name": "Productbanner_click",
               "property": {
