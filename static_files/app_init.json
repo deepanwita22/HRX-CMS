@@ -260,7 +260,7 @@
           "label": null,
           "on_click_cta": {
             "profile_seletor": false,
-            "type": "browser",
+            "type": "webview",
             "value": "https://www.abhayatechglobal.com/RubyTelemedicine",
             "clevertap": {
               "event_name": "Productbanner_click",
