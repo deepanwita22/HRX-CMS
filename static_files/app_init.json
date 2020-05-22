@@ -1,5 +1,80 @@
 [
   {
+    "type": "grid",
+    "data": {
+      "header": null,
+      "aspect_ratio": "1.09090909:1",
+      "data": [
+        {
+          "id": "2.1",
+          "is_new": false,
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/find_doctors.png",
+          "label": "Find Doctors",
+          "on_click_cta": {
+            "profile_seletor": false,
+            "type": "inapp",
+            "value": "SearchDashboard"
+          }
+        },
+        {
+          "id": "2.2",
+          "is_new": false,
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/find_medicine.png",
+          "label": "Find Medicines",
+          "on_click_cta": {
+            "profile_seletor": false,
+            "type": "inapp",
+            "value": "SearchDashboard"
+          }
+        },
+        {
+          "id": "2.4",
+          "is_new": false,
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/medicine_reminder.png",
+          "label": "Medication Reminder",
+          "on_click_cta": {
+            "profile_seletor": false,
+            "type": "inapp",
+            "value": "MedicationReminder"
+          }
+        },
+        {
+          "id": "2.6",
+          "is_new": false,
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/vaccination_scheduler.png",
+          "label": "Vaccination Scheduler",
+          "on_click_cta": {
+            "profile_seletor": false,
+            "type": "inapp",
+            "value": "VaccineDetail"
+          }
+        },
+        {
+          "id": "2.7",
+          "is_new": false,
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/my_doc_team.png",
+          "label": "My Doc Team",
+          "on_click_cta": {
+            "profile_seletor": false,
+            "type": "inapp",
+            "value": "DocTeamPage"
+          }
+        },
+        {
+          "id": "2.8",
+          "is_new": false,
+          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/health_report.png",
+          "label": "Health Report",
+          "on_click_cta": {
+            "profile_seletor": true,
+            "type": "webview",
+            "value": "https://quro-uat.healthrx.co.in/#/?intent=health_check"
+          }
+        }
+      ]
+    }
+  },
+  {
     "type": "carousel",
     "data": {
       "header": null,
@@ -36,103 +111,6 @@
             "profile_seletor": false,
             "type": "inapp",
             "value": "CovidTestDisclaimer"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "type": "grid",
-    "data": {
-      "header": null,
-      "aspect_ratio": "1.09090909:1",
-      "data": [
-        {
-          "id": "2.1",
-          "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/find_doctors.png",
-          "label": "Find Doctors",
-          "on_click_cta": {
-            "profile_seletor": false,
-            "type": "inapp",
-            "value": "SearchDashboard"
-          }
-        },
-        {
-          "id": "2.2",
-          "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/find_medicine.png",
-          "label": "Find Medicines",
-          "on_click_cta": {
-            "profile_seletor": false,
-            "type": "inapp",
-            "value": "SearchDashboard"
-          }
-        },
-        {
-          "id": "2.3",
-          "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/coronavirus.png",
-          "label": "Coronavirus Kit",
-          "on_click_cta": {
-            "profile_seletor": false,
-            "type": "webview|inapp",
-            "value": ""
-          }
-        },
-        {
-          "id": "2.4",
-          "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/medicine_reminder.png",
-          "label": "Medication Reminder",
-          "on_click_cta": {
-            "profile_seletor": false,
-            "type": "inapp",
-            "value": "MedicationReminder"
-          }
-        },
-        {
-          "id": "2.5",
-          "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/lifetsyle_tracker.png",
-          "label": "Lifestyle Tracker",
-          "on_click_cta": {
-            "profile_seletor": false,
-            "type": "inapp",
-            "value": ""
-          }
-        },
-        {
-          "id": "2.6",
-          "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/vaccination_scheduler.png",
-          "label": "Vaccination Scheduler",
-          "on_click_cta": {
-            "profile_seletor": false,
-            "type": "inapp",
-            "value": "VaccineDetail"
-          }
-        },
-        {
-          "id": "2.7",
-          "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/my_doc_team.png",
-          "label": "My Doc Team",
-          "on_click_cta": {
-            "profile_seletor": false,
-            "type": "inapp",
-            "value": "DocTeamPage"
-          }
-        },
-        {
-          "id": "2.8",
-          "is_new": false,
-          "banner_url": "https://bfhlprodvivantdoc.blob.core.windows.net/app-icons/png/health_report.png",
-          "label": "Health Report",
-          "on_click_cta": {
-            "profile_seletor": true,
-            "type": "webview",
-            "value": "https://quro-uat.healthrx.co.in/#/?intent=health_check"
           }
         }
       ]
