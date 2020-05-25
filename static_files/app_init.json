@@ -13,7 +13,7 @@
           "on_click_cta": {
             "profile_seletor": true,
             "type": "webview",
-            "value": "https://bajaj-covid-check.mediushealth.org/#/",
+            "value": "https://quro-uat.healthrx.co.in/#/?intent=symptom_check",
             "clevertap": {
               "event_name": "Whatsnewcard_click",
               "property": {
