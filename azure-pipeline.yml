@@ -12,28 +12,6 @@ jobs:
   displayName: Quality checks + Quality Analysis + Deployment
   pool: CI Pool
   steps:
-  # - task: CmdLine@2
-  #   inputs:
-  #     script: |
-  #       npm i
-  #       npm run lint
-  #       npm run test:azure
-  # - task: PublishTestResults@2
-  #   inputs:
-  #     testResultsFormat: 'JUnit'
-  #     testResultsFiles: 'test-results.xml'
-  # - task: PublishCodeCoverageResults@1
-  #   inputs:
-  #     codeCoverageTool: 'Cobertura'
-  #     summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
-  #     reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
-  # - task: SonarQubePrepare@4
-  #   inputs:
-  #     SonarQube: 'Sonarqube Server'
-  #     scannerMode: 'CLI'
-  #     configMode: 'file'
-  #     configFile: 'sonar-project-dev.properties'
-  # - task: SonarQubeAnalyze@4
   - task: Docker@2
     inputs:
       containerRegistry: 'bfhl-acr-connection'
@@ -51,7 +29,7 @@ jobs:
       command: 'upgrade'
       chartType: 'FilePath'
       chartPath: './deployment/helm-chart'
-      releaseName: 'identity'
+      releaseName: 'hrx-cms'
       overrideValues: 'version=$(Build.BuildId)'
       valueFile: './deployment/helm-chart/values-dev.yaml'
   - task: HelmDeploy@0
@@ -64,3 +42,4 @@ jobs:
       releaseName: 'identity-open'
       overrideValues: 'appName=identity-open,version=$(Build.BuildId),disableAuth=true'
       valueFile: './deployment/helm-chart/values-dev.yaml'
+
