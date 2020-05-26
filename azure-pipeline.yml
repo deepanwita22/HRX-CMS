@@ -40,6 +40,6 @@ jobs:
       chartType: 'FilePath'
       chartPath: './deployment/helm-chart'
       releaseName: 'hrx-cms'
-      overrideValues: 'appName=identity-open,version=$(Build.BuildId),disableAuth=true'
+      overrideValues: 'appName=hrx-cms,version=$(Build.BuildId),disableAuth=true'
       valueFile: './deployment/helm-chart/values-dev.yaml'
 
