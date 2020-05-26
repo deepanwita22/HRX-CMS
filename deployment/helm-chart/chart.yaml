@@ -1,0 +1,9 @@
+apiVersion: v2
+name: deployment
+description: A Helm chart for deploying the PHR Identity Module in Kubernetes
+
+type: application
+
+version: 1.0.1
+
+appVersion: 1.0.0
