@@ -1,4 +1,3 @@
 replicaCount: 1
 containerRegistry: bfhlcontainerregistry.azurecr.io
 nodeEnv: development
-keyVaultName: PHR-AKS-DEV
