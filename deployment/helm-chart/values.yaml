@@ -1,0 +1,7 @@
+appName: identity
+namespace: phr
+imageName: phr_identity_module
+appPort: 3000
+version: latest
+whitelistedSourceIp: 52.172.205.59/32
+disableAuth: false
