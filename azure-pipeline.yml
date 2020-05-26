@@ -39,7 +39,7 @@ jobs:
       command: 'upgrade'
       chartType: 'FilePath'
       chartPath: './deployment/helm-chart'
-      releaseName: 'identity-open'
+      releaseName: 'hrx-cms'
       overrideValues: 'appName=identity-open,version=$(Build.BuildId),disableAuth=true'
       valueFile: './deployment/helm-chart/values-dev.yaml'
 
