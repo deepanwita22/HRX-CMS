@@ -1,0 +1,66 @@
+trigger:
+- master
+
+resources:
+- repo: self
+
+pool:
+  vmImage: 'ubuntu-18.04'
+
+jobs:
+- job: automated_pipeline
+  displayName: Quality checks + Quality Analysis + Deployment
+  pool: CI Pool
+  steps:
+  - task: CmdLine@2
+    inputs:
+      script: |
+        npm i
+        npm run lint
+        npm run test:azure
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'test-results.xml'
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+      reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
+  - task: SonarQubePrepare@4
+    inputs:
+      SonarQube: 'Sonarqube Server'
+      scannerMode: 'CLI'
+      configMode: 'file'
+      configFile: 'sonar-project.properties'
+  - task: SonarQubeAnalyze@4
+  - task: Docker@2
+    inputs:
+      containerRegistry: 'prod-bfhl-acr-connection'
+      repository: 'phr_identity_module'
+      command: 'buildAndPush'
+      Dockerfile: '**/Dockerfile'
+      tags: '$(Build.BuildId)'
+  - task: HelmInstaller@1
+    inputs:
+      helmVersionToInstall: '3.1.1'
+  - task: HelmDeploy@0
+    inputs:
+      connectionType: 'Kubernetes Service Connection'
+      kubernetesServiceConnection: 'bfhl-aks-prod'
+      command: 'upgrade'
+      chartType: 'FilePath'
+      chartPath: './deployment/helm-chart'
+      releaseName: 'identity'
+      overrideValues: 'version=$(Build.BuildId)'
+      valueFile: './deployment/helm-chart/values-prod.yaml'
+  - task: HelmDeploy@0
+    inputs:
+      connectionType: 'Kubernetes Service Connection'
+      kubernetesServiceConnection: 'bfhl-aks-prod'
+      command: 'upgrade'
+      chartType: 'FilePath'
+      chartPath: './deployment/helm-chart'
+      releaseName: 'identity-open'
+      overrideValues: 'version=$(Build.BuildId),appName=identity-open,disableAuth=true'
+      valueFile: './deployment/helm-chart/values-prod.yaml'
