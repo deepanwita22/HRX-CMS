@@ -1,6 +1,6 @@
 apiVersion: v2
-name: deployment
-description: A Helm chart for deploying the PHR Identity Module in Kubernetes
+name: HRxCMS
+description: A Helm chart for deploying the HRxCMS in Kubernetes
 
 type: application
 
