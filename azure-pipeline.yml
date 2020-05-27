@@ -26,7 +26,6 @@ jobs:
     inputs:
       connectionType: 'Kubernetes Service Connection'
       kubernetesServiceConnection: 'bfhl-dev-aks'
-      namespace: 'hrxcms'
       command: 'install'
       chartType: 'FilePath'
       chartPath: './deployment/helm-chart'
