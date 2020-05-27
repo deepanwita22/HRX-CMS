@@ -14,7 +14,7 @@ jobs:
   steps:
   - task: Docker@2
     inputs:
-      containerRegistry: 'bfhl-acr-connection'
+      containerRegistry: 'managedcare-acr'
       repository: 'HRx-CMS'
       command: 'buildAndPush'
       Dockerfile: '**/Dockerfile'
@@ -25,21 +25,11 @@ jobs:
   - task: HelmDeploy@0
     inputs:
       connectionType: 'Kubernetes Service Connection'
-      kubernetesServiceConnection: 'bfhl-aks-dev'
+      kubernetesServiceConnection: 'bfhl-dev-aks'
       command: 'upgrade'
       chartType: 'FilePath'
       chartPath: './deployment/helm-chart'
       releaseName: 'hrx-cms'
       overrideValues: 'version=$(Build.BuildId)'
-      valueFile: './deployment/helm-chart/values-dev.yaml'
-  - task: HelmDeploy@0
-    inputs:
-      connectionType: 'Kubernetes Service Connection'
-      kubernetesServiceConnection: 'bfhl-aks-dev'
-      command: 'upgrade'
-      chartType: 'FilePath'
-      chartPath: './deployment/helm-chart'
-      releaseName: 'hrx-cms'
-      overrideValues: 'appName=hrx-cms,version=$(Build.BuildId),disableAuth=true'
       valueFile: './deployment/helm-chart/values-dev.yaml'
 
