@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: managedcare-dev
+  namespace: hrxcms-dev
   name: "{{ .Values.serviceName }}"
 spec:
   selector:
