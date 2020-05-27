@@ -4,4 +4,3 @@ metadata:
   name: hrxcms
   labels:
     name: hrxcms
-kubectl apply -f deployment/namespace.yml
