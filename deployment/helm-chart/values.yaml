@@ -1,8 +1,5 @@
 replicaCount: 1
 port: 5000
-image:
-  repository: nginx
-  tag: latest
 
 serviceName: hrxcms
 
@@ -21,3 +18,7 @@ podName: hrxcms
 service:
   type: ClusterIP
   port: 80
+
+containerRegistry: bfhlcontainerregistry.azurecr.io
+
+imageName: hrxcms
