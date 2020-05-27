@@ -20,4 +20,7 @@ spec:
         image: "{{ .Values.containerRegistry }}/{{ .Values.imageName }}:{{ .Values.version }}"
         imagePullPolicy: Always
         ports:
-        - containerPort: {{ .Values.containerPort }}
+          - containerPort: {{ .Values.containerPort }}
+        env:
+          - name: NODE_ENV
+            value: development
