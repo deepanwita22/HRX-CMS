@@ -27,7 +27,7 @@ jobs:
       connectionType: 'Kubernetes Service Connection'
       kubernetesServiceConnection: 'bfhl-dev-aks'
       namespace: 'hrxcms'
-      command: 'upgrade'
+      command: 'install'
       chartType: 'FilePath'
       chartPath: './deployment/helm-chart'
       releaseName: 'hrx-cms'
