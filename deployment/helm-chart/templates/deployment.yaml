@@ -1,53 +1,23 @@
-apiVersion: apps/v1
+apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: "{{ .Values.appName }}"
-  namespace: "{{ .Values.namespace }}"
-spec:
+  name: "{{ .Values.name }}"
+  namespace: hrxcms-dev
+spec: 
   selector:
     matchLabels:
-      app: "{{ .Values.appName }}"
+      app: "{{ .Values.label }}"
   replicas: {{ .Values.replicaCount }}
-  template:
+  template: 
     metadata:
-      name: "{{ .Values.appName }}"
+      name: "{{ .Values.podname }}"
+      namespace: hrxcms
       labels:
-        app: "{{ .Values.appName }}"
+        app: "{{ .Values.label }}"
     spec:
       containers:
-      - name: "{{ .Values.appName }}"
-        image: "{{ .Values.containerRegistry }}/{{ .Values.imageName }}:{{ .Values.version }}"
-        {{ if eq .Values.nodeEnv "development" }}
-        command: [ "node", "--inspect", "src/index.js" ]
-        {{ end }}
+      - name: "{{ .Values.containerName }}"
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: Always
-        envFrom:
-          - configMapRef:
-              name: "{{ .Values.appName }}-config"
-        env:
-          - name: DB_CONNECTION_STRING
-            value: "{{ .Values.appName }}-db-url-secret@azurekeyvault"
-          - name: CUSTOM_TOKEN_PRIVATE_KEY
-            value: "{{ .Values.appName }}-consent-token-private-key@azurekeyvault"
-          - name: CUSTOM_TOKEN_PUBLIC_KEY
-            value: "{{ .Values.appName }}-consent-token-public-key@azurekeyvault"
-          - name: DISABLE_LOGGING
-          - name: CLEVERTAP_ACCOUNT_ID
-            value: "{{ .Values.appName }}-clevertap-account-id@azurekeyvault"
-          - name: CLEVERTAP_PASSCODE
-            value: "{{ .Values.appName }}-clevertap-password@azurekeyvault"
-          - name: AZURE_BLOB_CONNECTION
-            value: "{{ .Values.appName }}-id-module-blob-connection@azurekeyvault"
-          {{ if (.Values.insightsSecretName) }}
-          - name: AZURE_INSIGHTS_KEY
-            value: "{{ .Values.appName }}-azure-insights-key@azurekeyvault"
-          {{ end }}
-        resources:
-          limits:
-            memory: 200Mi
-            cpu: 1000m
-          requests:
-            memory: 100Mi
-            cpu: 100m
         ports:
-        - containerPort: {{ .Values.appPort }}
+        - containerPort: {{ .Values.containerPort }}
