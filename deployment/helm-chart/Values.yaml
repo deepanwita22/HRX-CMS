@@ -1,7 +1,23 @@
 replicaCount: 1
-containerRegistry: bfhlcontainerregistry.azurecr.io
-nodeEnv: development
-keyVaultName: PHR-AKS-DEV
-dnsPrefix: ebh-hrx-cms
-phrVaultUri: http://104.211.74.62:5500
-hrxOtpAppCode: f2lw/knlMJU
+port: 5000
+image:
+  repository: nginx
+  tag: latest
+
+serviceName: hrxcms
+
+label: hrxcms
+
+TargetPort: 5000
+
+containerName: hrxcms
+
+containerPort: 5000
+
+name: hrxcms
+
+podName: hrxcms
+
+service:
+  type: ClusterIP
+  port: 80
