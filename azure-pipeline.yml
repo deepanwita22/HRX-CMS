@@ -14,7 +14,7 @@ jobs:
   steps:
   - task: Docker@2
     inputs:
-      containerRegistry: 'managedcare-acr'
+      containerRegistry: 'bfhl-acr-connection'
       repository: 'HRx-CMS'
       command: 'buildAndPush'
       Dockerfile: '**/Dockerfile'
@@ -31,5 +31,5 @@ jobs:
       chartPath: './deployment/helm-chart'
       releaseName: 'hrx-cms'
       overrideValues: 'version=$(Build.BuildId)'
-      valueFile: './deployment/helm-chart/values-dev.yaml'
+      valueFile: './deployment/helm-chart/values.yaml'
 
